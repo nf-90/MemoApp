@@ -7,10 +7,10 @@ import CircleButton from '../components/CircleButton';
 
 export default function MemoListScreen() {
   return (
-    <View style = {styles.container}>
+    <View style={styles.container}>
       <AppBar />
       <MemoList />
-      <CircleButton>+</CircleButton>
+      <CircleButton name="plus" />
     </View>
   );
 }
