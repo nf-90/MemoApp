@@ -11,8 +11,8 @@ export default function MemoDetailScreen() {
     <View style={styles.container}>
       <AppBar />
       <View style={styles.memoHeader}>
-       <Text style={styles.memoTitle}>買い物リスト</Text>
-       <Text style={styles.memoDate}>2020年12月24日　10:00</Text>
+        <Text style={styles.memoTitle}>買い物リスト</Text>
+        <Text style={styles.memoDate}>2020年12月24日 10:00</Text>
       </View>
       <ScrollView style={styles.memoBody}>
         <Text style={styles.memoText}>
@@ -21,7 +21,7 @@ export default function MemoDetailScreen() {
           本文用なので使い方を間違えると不自然に見えることもありますので要注意。
         </Text>
       </ScrollView>
-      <CircleButton style={ {top: 160, bottom: 'auto' }} name='edit-2' />
+      <CircleButton style={{ top: 160, bottom: 'auto' }} name="edit-2" />
     </View>
   );
 }
