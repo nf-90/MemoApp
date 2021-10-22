@@ -11,7 +11,6 @@ import { dateToString } from '../utils';
 export default function MemoDetailScreen(props) {
   const { navigation, route } = props;
   const { id } = route.params;
-  console.log(id);
   const [memo, setMemo] = useState(null);
 
   useEffect(() => {
@@ -20,8 +19,7 @@ export default function MemoDetailScreen(props) {
     if (currentUser) {
       const db = firebase.firestore();
       const ref = db.collection(`users/${currentUser.uid}/memos`).doc(id);
-      ref.onSnapshot((doc) => {
-        console.log(doc.id, doc.data());
+      unsubscribe = ref.onSnapshot((doc) => {
         const data = doc.data();
         setMemo({
           id: doc.id,

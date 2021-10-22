@@ -6,10 +6,10 @@ import { useNavigation } from '@react-navigation/native';
 import {
   shape, string, instanceOf, arrayOf,
 } from 'prop-types';
+import firebase from 'firebase';
 
 import { Feather } from '@expo/vector-icons';
 import { dateToString } from '../utils';
-import firebase from 'firebase';
 
 export default function MemoList(props) {
   const { memos } = props;
